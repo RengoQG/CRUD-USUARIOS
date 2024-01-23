@@ -3,6 +3,7 @@
 Este repositorio contiene una API Rest desarrollada con Express que permite realizar operaciones CRUD de usuarios y autenticación mediante JWT.
 
 ### Requisitos previos
+- Asegurate de que docker este corriendo
 - Node.js y npm instalados
 - Docker instalado
 - Base de datos MySQL configurada
