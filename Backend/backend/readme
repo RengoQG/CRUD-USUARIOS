@@ -6,10 +6,11 @@ Este repositorio contiene una API Rest desarrollada con Express que permite real
 - Node.js y npm instalados
 - Docker instalado
 - Base de datos MySQL configurada
+ -Se puede usar MySQL workbench  8.0
 
 ### Instalación
 
-1. Clona este repositorio: `git clone https://github.com/tu-usuario/nombre-repo.git`
+1. Clona este repositorio: `git clone https://github.com/RengoQG/CRUD-USUARIOS`
 2. Navega al directorio del proyecto: `cd nombre-repo`
 3. Instala las dependencias: `npm install`
 
@@ -18,10 +19,18 @@ Este repositorio contiene una API Rest desarrollada con Express que permite real
 1. Crea una base de datos MySQL y configura las credenciales en el archivo `.env`.
 2. Ejecuta las migraciones: `npm run migrate`
 
+## Creación de la tabla
+`CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE
+);`
+
 ### Ejecución
 
 1. Inicia el servidor: `npm start`
-2. La API estará disponible en `http://localhost:3000`
+2. La API estará disponible en `http://localhost:3005`
 
 ### Endpoints
 
