@@ -1,0 +1,89 @@
+# API Rest con Express para Usuarios y Autenticación JWT
+
+Este repositorio contiene una API Rest desarrollada con Express que permite realizar operaciones CRUD de usuarios y autenticación mediante JWT.
+
+### Requisitos previos
+- Node.js y npm instalados
+- Docker instalado
+- Base de datos MySQL configurada
+
+### Instalación
+
+1. Clona este repositorio: `git clone https://github.com/tu-usuario/nombre-repo.git`
+2. Navega al directorio del proyecto: `cd nombre-repo`
+3. Instala las dependencias: `npm install`
+
+### Configuración de la Base de Datos
+
+1. Crea una base de datos MySQL y configura las credenciales en el archivo `.env`.
+2. Ejecuta las migraciones: `npm run migrate`
+
+### Ejecución
+
+1. Inicia el servidor: `npm start`
+2. La API estará disponible en `http://localhost:3000`
+
+### Endpoints
+
+- `GET /usuarios`: Obtiene la lista de usuarios.
+### Ejemplo de solicitud 
+
+- `localhost:3005/api/usersT`
+
+- `Respues esperada (200)` 
+
+- `user": {
+    "id": 3,
+    "username": "Prueba a",
+    "password": "123",
+    "email": "abr@gmail.com"
+  }`
+
+- `GET /usuarios/:id`: Obtiene un usuario por ID.
+### Ejemplo de solicitud
+
+`localhost:3005/api/listar-usuario/1`
+
+- `Respuesta esperada (200)`
+
+- `user": {
+    "id": 3,
+    "username": "Johan",
+    "email": "johan@gmail.com"
+  }`
+
+- `POST /usuarios`: Crea un nuevo usuario.
+### Ejemplo de respuesta
+
+- `localhost:3005/api/signup`
+
+- `Respuesta esperada (200)`
+
+-`Registrado correctamente`
+
+- `PUT /usuarios/:id`: Actualiza un usuario por ID.
+### Ejemplo de respuesta 
+
+-`localhost:3005/api/users/2`
+
+-`Respuesta esperada (200)`
+
+-`Actualizado correctamente`
+
+- `DELETE /usuarios/:id`: Elimina un usuario por ID.
+### Ejemplo de respuesta
+
+-`localhost:3005/api/users/1`
+
+-`Respuesta esperDA (200)`
+
+-`Elimiado correctamente`
+- `POST /login`: Autenticación JWT.
+
+## Contribuir
+
+¡Siéntete libre de contribuir! Abre un issue o envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE.md para más detalles.
